@@ -57,3 +57,14 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Firebase setup
+
+The app is already prepared to read content from Firestore through `src/app/core/portfolio/portfolio-content.service.ts`.
+
+1. Create your Firebase project and enable Firestore.
+2. Fill `src/environments/environment.ts` with your production Firebase config.
+3. Fill `src/environments/environment.development.ts` for local development if needed.
+4. Keep `order` fields in list documents so the UI can render them predictably.
+5. Collections expected by the app: `site/config`, `profile/main`, `metrics`, `skills`, `projects`, `steps`, `socialLinks`.
+6. Seed Firestore with `npm run seed:firestore` after setting `GOOGLE_APPLICATION_CREDENTIALS` or `FIREBASE_SERVICE_ACCOUNT_KEY`.

@@ -1,7 +1,7 @@
 <section id="inicio" class="hero">
     <div class="hero-copy">
       <div class="eyebrow">
-        <span>PORTFOLIO EDITABLE</span>
+        <span>Sobre Mi</span>
       </div>
 
       <h1>{{ content().profile.name }}<span>{{ content().profile.role }}</span></h1>
@@ -15,7 +15,7 @@
 
       <div class="hero-meta">
         <span>{{ content().profile.location }}</span>
-        <span>Listo para usar</span>
+        <span>24 Años</span>
       </div>
     </div>
 
@@ -31,6 +31,8 @@
         <p>&nbsp;&nbsp;<span class="keyword">constructor</span>() &#123;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">role</span> = <strong>"{{ content().profile.role }}"</strong>;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">focus</span> = <strong>"Desarrollo de Software con enfoque en Backend y Fullstack"</strong>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">interests</span> = [<strong>"Python"</strong>, <strong>"JavaScript"</strong>, <strong>"TypeScript"</strong>, 
+          <strong> "Open Source Software"</strong>, <strong>"Linux"</strong>];</p>
         <p>&nbsp;&nbsp;&#125;</p>
         <p>&nbsp;&nbsp;<span class="keyword">build</span>() &#123;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <strong> portfolio</strong>;</p>
@@ -91,14 +93,23 @@
         <p class="section-kicker">TRABAJO SELECCIONADO</p>
         <h2>Proyectos destacados</h2>
       </div>
-      <p class="section-note">Cada tarjeta está pensada para luego alimentarse con datos dinámicos.</p>
     </div>
 
     <div class="projects-layout">
       <article class="project-feature glass-card">
-        <div class="project-visual">
+        <div class="project-visual stack-showcase">
           <div class="project-badge">Mis Proyectos</div>
-          <div class="project-overlay"></div>
+          <div class="tech-stack-preview">
+            @for (tech of getTechStack(); track tech.name) {
+              <div class="tech-icon" [style.color]="tech.accent === 'primary' ? 'var(--accent-primary)' : tech.accent === 'secondary' ? 'var(--accent-secondary)' : 'var(--accent-tertiary)'">
+                <img 
+                  [src]="tech.iconUrl" 
+                  [alt]="tech.name"
+                  class="tech-icon-img"
+                />
+              </div>
+            }
+          </div>
         </div>
         <div class="project-content">
           <div class="project-meta">
@@ -106,7 +117,7 @@
           </div>
           <h3>Principales Proyectos</h3>
           <p>
-            A la derecha podrás ver algunos de los proyectos más destacados en los que he trabajado, con un enfoque en UI, sistemas y datos. 
+            A la continuación podrás ver algunos de mis proyectos personales,. 
             Cada proyecto está diseñado  para mostrar mis habilidades técnicas y mi capacidad para resolver problemas 
             complejos a través de soluciones innovadoras.
           </p>

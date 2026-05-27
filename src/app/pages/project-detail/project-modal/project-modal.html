@@ -1,0 +1,63 @@
+@if (project) {
+  <!-- Fondo oscuro del modal -->
+  <div class="modal-overlay" (click)="onCloseModal()">
+    <!-- Modal card -->
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <!-- Botón cerrar -->
+      <button class="close-btn" (click)="onCloseModal()">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <!-- Contenido del proyecto -->
+      <div class="modal-header">
+        <h2>{{ project.title }}</h2>
+        <p class="category">{{ project.category }}</p>
+      </div>
+
+      <div class="modal-body">
+        <p class="description">{{ project.description }}</p>
+
+        @if (project.challenge) {
+          <div class="section">
+            <h3>El Desafío</h3>
+            <p>{{ project.challenge }}</p>
+          </div>
+        }
+
+        @if (project.solution) {
+          <div class="section">
+            <h3>La Solución</h3>
+            <p>{{ project.solution }}</p>
+          </div>
+        }
+
+        @if (project.features && project.features.length) {
+          <div class="section">
+            <h3>Características</h3>
+            <ul>
+              <li *ngFor="let feature of project.features">{{ feature }}</li>
+            </ul>
+          </div>
+        }
+
+        <div class="tags">
+          <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        @if (project.githubUrl) {
+          <a [href]="project.githubUrl" target="_blank" class="btn-primary">
+            Ver Código
+          </a>
+        }
+        @if (project.demoUrl) {
+          <a [href]="project.demoUrl" target="_blank" class="btn-primary">
+            Ver Demo
+          </a>
+        }
+        <button (click)="onCloseModal()" class="btn-secondary">Cerrar</button>
+      </div>
+    </div>
+  </div>
+}

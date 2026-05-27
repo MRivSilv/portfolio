@@ -1,0 +1,40 @@
+<div class="project-detail-page">
+  <div class="ambient ambient-primary"></div>
+  <div class="ambient ambient-secondary"></div>
+
+  <div class="project-detail-header">
+    <a href="/" class="back-link">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Volver al inicio
+    </a>
+    <h1>Mis Proyectos</h1>
+  </div>
+
+  <div class="projects-grid">
+    <article 
+      *ngFor="let project of allProjects()" 
+      class="project-card glass-card"
+      (click)="selectProject(project)"
+    >
+      <div class="project-card-header">
+        <span class="category">{{ project.category }}</span>
+        <span class="year">{{ project.year }}</span>
+      </div>
+      <h3>{{ project.title }}</h3>
+      <p class="description">{{ project.summary }}</p>
+      <div class="tags-list">
+        <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span>
+      </div>
+      <div class="action">
+        <span>Ver detalles</span>
+        <span class="material-symbols-outlined">arrow_forward</span>
+      </div>
+    </article>
+  </div>
+
+  <app-project-modal 
+    *ngIf="selectedProject()"
+    [project]="selectedProject()!"
+    (closeModal)="closeModal()"
+  ></app-project-modal>
+</div>

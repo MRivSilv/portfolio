@@ -1,0 +1,138 @@
+<section id="inicio" class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span>PORTFOLIO EDITABLE</span>
+      </div>
+
+      <h1>{{ content().profile.name }}<span>{{ content().profile.role }}</span></h1>
+      <p class="hero-lead">{{ content().profile.headline }}</p>
+      <p class="hero-body">{{ content().profile.bio }}</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn btn-ghost" href="#contacto">Hablar conmigo</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>{{ content().profile.location }}</span>
+        <span>Listo para usar</span>
+      </div>
+    </div>
+
+    <aside class="hero-panel glass-card">
+      <div class="window-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="code-block">
+        <p><span class="keyword">class</span> <strong>Developer</strong> &#123;</p>
+        <p>&nbsp;&nbsp;<span class="keyword">constructor</span>() &#123;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">role</span> = <strong>"{{ content().profile.role }}"</strong>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">focus</span> = <strong>"UI, sistemas y datos"</strong>;</p>
+        <p>&nbsp;&nbsp;&#125;</p>
+        <p>&nbsp;&nbsp;<span class="keyword">build</span>() &#123;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <strong>portfolio</strong>;</p>
+        <p>&nbsp;&nbsp;&#125;</p>
+        <p>&#125;</p>
+      </div>
+
+      <div class="mini-grid">
+        <article *ngFor="let metric of content().metrics">
+          <strong>{{ metric.value }}</strong>
+          <span>{{ metric.label }}</span>
+          <p>{{ metric.detail }}</p>
+        </article>
+      </div>
+    </aside>
+  </section>
+
+  <section id="habilidades" class="section">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">STACK PRINCIPAL</p>
+        <h2>Habilidades y herramientas</h2>
+      </div>
+      <p class="section-note">Una base modular para que después el contenido venga desde Firebase.</p>
+    </div>
+
+    <div class="skills-grid">
+      <article *ngFor="let skill of content().skills" class="skill-card glass-card">
+        <span
+          class="material-symbols-outlined skill-icon"
+          [style.color]="skill.accent === 'primary' ? 'var(--accent-primary)' : skill.accent === 'secondary' ? 'var(--accent-secondary)' : 'var(--accent-tertiary)'"
+        >
+          {{ skill.icon }}
+        </span>
+        <h3>{{ skill.name }}</h3>
+      </article>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section section-dark">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">TRABAJO SELECCIONADO</p>
+        <h2>Proyectos destacados</h2>
+      </div>
+      <p class="section-note">Cada tarjeta está pensada para luego alimentarse con datos dinámicos.</p>
+    </div>
+
+    <div class="projects-layout">
+      <article class="project-feature glass-card">
+        <div class="project-visual">
+          <div class="project-badge">Mis Proyectos</div>
+          <div class="project-overlay"></div>
+        </div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span>Desarrollo de software</span>
+          </div>
+          <h3>Principales Proyectos</h3>
+          <p>
+            A la derecha podrás ver algunos de los proyectos más destacados en los que he trabajado, con un enfoque en UI, sistemas y datos. 
+            Cada proyecto está diseñado  para mostrar mis habilidades técnicas y mi capacidad para resolver problemas 
+            complejos a través de soluciones innovadoras.
+          </p>
+        </div>
+      </article>
+
+      <div class="projects-stack">
+        <a *ngFor="let project of content().projects" [routerLink]="['/proyecto', project.id]" class="project-card glass-card">
+          <div class="project-card-top">
+            <span>{{ project.category }}</span>
+            <span>{{ project.year }}</span>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <div class="tag-row">
+            <span *ngFor="let tag of project.tags">{{ tag }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="section-kicker">FLUJO DE TRABAJO</p>
+        <h2>Cómo quedará listo para editar</h2>
+      </div>
+    </div>
+  </section> 
+
+  <section id="contacto" class="cta">
+    <div class="cta-card glass-card">
+      <p class="section-kicker">CONTACTO</p>
+      <h2>¿Te gusta mi trabajo?</h2>
+      <p>
+        Contactame con el botón de abajo para establecer una conexión. Estoy abierto a oportunidades, colaboraciones o simplemente a charlar sobre tecnología y proyectos interesantes.
+      </p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" [href]="'mailto:' + content().profile.email">Establecer conexión</a>
+        <a class="btn btn-ghost" href="#inicio">Volver arriba</a>
+      </div>
+    </div>
+  </section>

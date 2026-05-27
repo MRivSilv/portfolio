@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { App } from './app';
-import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
+import { Home } from './pages/home/home';
+import { ProjectDetailComponent } from './pages/project-detail/project-detail';
 
 export const routes: Routes = [
   {
     path: '',
-    component: App
+    component: Home
   },
   {
     path: 'proyecto/:id',

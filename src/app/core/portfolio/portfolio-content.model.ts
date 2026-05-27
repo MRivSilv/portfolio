@@ -87,7 +87,7 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
   brand: 'MATIAS RIVILLO',
   profile: {
     name: 'Matias Rivillo',
-    role: 'Ingeniero en Computación e Informática',
+    role: 'Ingeniero en Computación e Informática, Desarrollador Junior',
     headline: 'Con fuerte formación en desarrollo de software y metodologías ágiles.',
     bio:
       'En este sitio web podrás visitar algunos de mis proyectos, habilidades y experiencia.',

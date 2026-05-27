@@ -17,19 +17,12 @@
 
     <div class="status-chip">
       <span class="status-dot"></span>
-      <span>{{ firebaseReady() ? 'FIREBASE READY' : 'LOCAL FALLBACK' }}</span>
+      <span>CONTENIDO LOCAL</span>
     </div>
   </header>
 
   <section id="inicio" class="hero">
     <div class="hero-copy">
-      @if (error()) {
-        <div class="glass-card error-banner">
-          <strong>Firestore no está respondiendo.</strong>
-          <span>{{ error() }}</span>
-        </div>
-      }
-
       <div class="eyebrow">
         <span>PORTFOLIO EDITABLE</span>
       </div>
@@ -45,7 +38,7 @@
 
       <div class="hero-meta">
         <span>{{ content().profile.location }}</span>
-        <span>{{ loading() ? 'Sincronizando contenido' : 'Preparado para Firebase' }}</span>
+        <span>Listo para usar</span>
       </div>
     </div>
 
@@ -129,7 +122,7 @@
       </article>
 
       <div class="projects-stack">
-        <article *ngFor="let project of content().projects" class="project-card glass-card">
+        <a *ngFor="let project of content().projects" [routerLink]="['/proyecto', project.id]" class="project-card glass-card">
           <div class="project-card-top">
             <span>{{ project.category }}</span>
             <span>{{ project.year }}</span>
@@ -139,7 +132,7 @@
           <div class="tag-row">
             <span *ngFor="let tag of project.tags">{{ tag }}</span>
           </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -151,23 +144,14 @@
         <h2>Cómo quedará listo para editar</h2>
       </div>
     </div>
-
-    <div class="steps-grid">
-      <article *ngFor="let step of content().steps" class="step-card glass-card">
-        <span>{{ step.index }}</span>
-        <h3>{{ step.title }}</h3>
-        <p>{{ step.description }}</p>
-      </article>
-    </div>
-  </section>
+  </section> 
 
   <section id="contacto" class="cta">
     <div class="cta-card glass-card">
       <p class="section-kicker">CONTACTO</p>
-      <h2>Listo para convertirlo en tu portfolio.</h2>
+      <h2>¿Te gusta mi trabajo?</h2>
       <p>
-        Esta versión ya queda como plantilla visual; después conectamos Firebase para editar
-        contenido desde un panel o colección.
+        Contactame con el botón de abajo para establecer una conexión. Estoy abierto a oportunidades, colaboraciones o simplemente a charlar sobre tecnología y proyectos interesantes.
       </p>
       <div class="cta-actions">
         <a class="btn btn-primary" [href]="'mailto:' + content().profile.email">Establecer conexión</a>

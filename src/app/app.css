@@ -555,9 +555,6 @@
 @media (max-width: 1100px) {
   .hero,
   .projects-layout,
-  .steps-grid {
-    grid-template-columns: 1fr;
-  }
 
   .skills-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

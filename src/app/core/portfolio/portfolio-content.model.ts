@@ -196,7 +196,8 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
         'Sistema de asignación automática de viajes',
         'Notificaciones push en tiempo real',
         'Alertas tts para conductores',
-        'Reportes detallados de ingresos'
+        'Reportes detallados de ingresos',
+        'Si desea probrar la plataforma, apriete el boton abajo y loguee con las siguientes credenciales: email: usuario@demo.com, password: demo12345'
       ],
       screenshots: [
         {
@@ -215,7 +216,7 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
           caption: 'Geolocalizacion en tiempo real de conductores y panel de control para asignación de viajes'
         },
       ],
-      demoUrl: 'https://apptaxy-web.vercel.app/',
+      demoUrl: 'https://apptaxi-web.vercel.app/',
       githubUrl: '',
       technicalDetails:
         'Stack: React Native (Expo) para iOS/Android, Angular 16+ para admin web, FastAPI para backend, PostgreSQL para datos. Integración con OpenStreeMaps, y Websockets para actualizaciones en tiempo real.',

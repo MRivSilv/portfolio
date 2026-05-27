@@ -1,11 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PortfolioContentService } from '../../core/portfolio/portfolio-content.service';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
   standalone: true

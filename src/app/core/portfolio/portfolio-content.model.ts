@@ -8,6 +8,8 @@ export interface Metric {
 export interface Skill {
   name: string;
   icon: string;
+  iconType?: 'devicon' | 'svg-url' | 'material';
+  iconUrl?: string;
   accent: 'primary' | 'secondary' | 'tertiary';
   category: string;
   level: string;
@@ -99,18 +101,18 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
     { value: 'Idioma Extranjero', label: 'Inglés', detail: 'Fluidez comunicacional', order: 3 }
   ],
   skills: [
-    { name: 'Python', icon: '', accent: 'primary', category: 'Language', level: 'Avanzado', order: 1 },
-    { name: 'Angular', icon: 'layers', accent: 'secondary', category: 'Frontend', level: 'Intermedio', order: 2 },
-    { name: 'Go', icon: 'dns', accent: 'tertiary', category: 'Backend', level: 'Básico', order: 3 },
-    { name: 'AWS', icon: 'database', accent: 'primary', category: 'Cloud', level: 'Básico', order: 4 },
-    { name: 'PostgreSQL', icon: 'storage', accent: 'secondary', category: 'Datos', level: 'Básico', order: 5 },
-    { name: 'React Native', icon: 'design_services', accent: 'tertiary', category: 'Mobile', level: 'Básico', order: 6 },
-    { name: 'Machine Learning', icon: 'brain', accent: 'primary', category: 'Data Science', level: 'Intermedio', order: 7 },
-    { name: 'Django', icon: 'web', accent: 'secondary', category: 'Backend', level: 'Intermedio', order: 8 },
-    { name: 'FastAPI', icon: 'flash_on', accent: 'tertiary', category: 'Backend', level: 'Intermedio', order: 9 },
-    { name: 'Git', icon: 'git_hub', accent: 'primary', category: 'Tools', level: 'Básico', order: 10 },
-    {name: 'Inglés', icon: 'language', accent: 'secondary', category: 'Soft Skill', level: 'Fluido', order: 11 },
-    {name: 'Trabajo en equipo', icon: 'group', accent: 'tertiary', category: 'Soft Skill', level: 'Avanzado', order: 12 }
+    { name: 'Python', icon: 'python', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg', accent: 'primary', category: 'Language', level: 'Avanzado', order: 1 },
+    { name: 'Angular', icon: 'angular', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg', accent: 'secondary', category: 'Frontend', level: 'Intermedio', order: 2 },
+    { name: 'Go', icon: 'go', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg', accent: 'tertiary', category: 'Backend', level: 'Básico', order: 3 },
+    { name: 'AWS', icon: 'amazonwebservices', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg', accent: 'primary', category: 'Cloud', level: 'Básico', order: 4 },
+    { name: 'PostgreSQL', icon: 'postgresql', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg', accent: 'secondary', category: 'Datos', level: 'Básico', order: 5 },
+    { name: 'React Native', icon: 'react', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', accent: 'tertiary', category: 'Mobile', level: 'Básico', order: 6 },
+    { name: 'Machine Learning', icon: 'scikitlearn', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg', accent: 'primary', category: 'Data Science', level: 'Intermedio', order: 7 },
+    { name: 'Django', icon: 'django', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg', accent: 'secondary', category: 'Backend', level: 'Intermedio', order: 8 },
+    { name: 'FastAPI', icon: 'fastapi', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg', accent: 'tertiary', category: 'Backend', level: 'Intermedio', order: 9 },
+    { name: 'Git', icon: 'git', iconType: 'svg-url', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg', accent: 'primary', category: 'Tools', level: 'Básico', order: 10 },
+    { name: 'Inglés', icon: 'language', iconType: 'material', accent: 'secondary', category: 'Soft Skill', level: 'Fluido', order: 11 },
+    { name: 'Trabajo en equipo', icon: 'group', iconType: 'material', accent: 'tertiary', category: 'Soft Skill', level: 'Avanzado', order: 12 }
   ],
   projects: [
     {

@@ -127,17 +127,16 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
       featured: true,
       order: 1,
       challenge:
-        'Necesitaba una forma segura y rápida de gestionar múltiples contraseñas desde la terminal sin depender de servicios en la nube. Los gestores existentes requieren GUI o no son tan eficientes en CLI.',
+        'Ultimamente me he encontrado trabajando con MXLinux instalado en un USB Stick, por lo que necesitaba una solución ligera y eficiente para gestionar mis credenciales.',
       solution:
         'Desarrollé Perkbox utilizando Go por su velocidad y seguridad inherente. Implementé encriptación AES-256 para almacenar credenciales localmente, con comandos CRUD intuitivos y búsqueda rápida.',
       results:
-        'Herramienta funcional que reduce el tiempo de acceso a contraseñas en ~80% comparado con gestores gráficos. Encriptación de nivel empresarial manteniendo simplicidad de uso.',
+        'Herramienta funcional que reduce el tiempo de acceso a contraseñas simplemente obteniendo las credenciales necesarias, copiandolas al clipboard, y luego borrandolas.',
       features: [
         'Encriptación AES-256 de contraseñas',
         'Comandos CLI intuitivos y rápidos',
         'Búsqueda avanzada de credenciales',
         'Portabilidad entre dispositivos',
-        'Auditoría de acceso',
         'Generador de contraseñas seguras'
       ],
       screenshots: [
@@ -171,7 +170,7 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
         },
         {
           title: 'Rendimiento',
-          content: 'La aplicación compila a un binario único de ~15MB. Tiempo de búsqueda inferior a 100ms incluso con 10,000+ contraseñas almacenadas.'
+          content: 'La aplicación compila a un binario único. Tiempo de búsqueda inferior a 100ms.'
         }
       ]
     },
@@ -195,38 +194,31 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
       features: [
         'Geolocalización en tiempo real con Maps',
         'Sistema de asignación automática de viajes',
-        'Panel administrativo con analytics',
-        'Integración de pagos con Stripe',
         'Notificaciones push en tiempo real',
-        'Sistema de calificación y reviews',
+        'Alertas tts para conductores',
         'Reportes detallados de ingresos'
       ],
       screenshots: [
         {
-          url: '/images/projects/taxytracker-1.png',
-          alt: 'App móvil de conductor',
-          caption: 'Interfaz de conductor con mapas en tiempo real'
+          url: '/images/projects/tt_mobile1.jpg',
+          alt: 'Login de conductor',
+          caption: 'Interfaz de conductor para iniciar sesión'
         },
         {
-          url: '/images/projects/taxytracker-2.png',
-          alt: 'Panel administrativo',
-          caption: 'Dashboard para gestión de flota'
+          url: '/images/projects/tt_mobile2.jpg',
+          alt: 'Vista principal del conductor',
+          caption: 'Incluye boton para compartir ubicacion y muestra de viajes asignados'
         },
         {
-          url: '/images/projects/taxytracker-3.png',
-          alt: 'Reportes analíticos',
-          caption: 'Análisis de viajes y ganancias'
+          url: '/images/projects/tt_web1.png',
+          alt: 'Vista principal del panel administrativo para gestion de conductores y viajes',
+          caption: 'Geolocalizacion en tiempo real de conductores y panel de control para asignación de viajes'
         },
-        {
-          url: '/images/projects/taxytracker-4.png',
-          alt: 'Sistema de calificación',
-          caption: 'Ratings y reviews de conductores'
-        }
       ],
-      demoUrl: 'https://taxytracker-demo.example.com',
-      githubUrl: 'https://github.com/MRivSilv/taxytracker',
+      demoUrl: 'https://apptaxy-web.vercel.app/',
+      githubUrl: '',
       technicalDetails:
-        'Stack: React Native (Expo) para iOS/Android, Angular 16+ para admin web, FastAPI con SQLAlchemy para backend, PostgreSQL para datos. Integración con Google Maps API, Firebase Cloud Messaging para push notifications y Stripe para pagos.',
+        'Stack: React Native (Expo) para iOS/Android, Angular 16+ para admin web, FastAPI para backend, PostgreSQL para datos. Integración con OpenStreeMaps, y Websockets para actualizaciones en tiempo real.',
       sections: [
         {
           title: 'Frontend Móvil',
@@ -293,7 +285,7 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
           caption: 'Resultados de backtesting histórico'
         }
       ],
-      githubUrl: 'https://github.com/MRivSilv/ml-eurusd',
+      githubUrl: 'https://github.com/MRivSilv/MLEURUSD',
       technicalDetails:
         'Conjunto de datos: 5 años de datos EUR/USD horarios. Modelos: XGBoost (300 árboles), LSTM (2 capas con 128 unidades), Random Forest (500 árboles). Validación: walk-forward testing con ventanas de 6 meses. Preprocesamiento: normalización MinMax, detección de outliers con IQR.',
       sections: [

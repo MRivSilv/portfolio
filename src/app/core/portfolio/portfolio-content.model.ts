@@ -129,9 +129,9 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
       challenge:
         'Ultimamente me he encontrado trabajando con MXLinux instalado en un USB Stick, por lo que necesitaba una solución ligera y eficiente para gestionar mis credenciales.',
       solution:
-        'Desarrollé Perkbox utilizando Go por su velocidad y seguridad inherente. Implementé encriptación AES-256 para almacenar credenciales localmente, con comandos CRUD intuitivos y búsqueda rápida.',
+        'Desarrollé Perkbox utilizando Go por su velocidad y seguridad inherente. Implementé encriptación AES-256 para almacenar credenciales localmente, con comandos CRUD intuitivos y búsqueda rápida. Hoy en dia puede ser instalada descargando el repositorio y compilando el binario, o bajando el paquete "perkbox" desde la AUR (solo para usuarios de Arch Linux).',
       results:
-        'Herramienta funcional que reduce el tiempo de acceso a contraseñas simplemente obteniendo las credenciales necesarias, copiandolas al clipboard, y luego borrandolas. Hoy en dia puede ser instalada descargando el repositorio y compilando el binario, o bajando el paquete "perkbox" desde la AUR (solo para usuarios de Arch Linux).',
+        'Herramienta funcional que reduce el tiempo de acceso a contraseñas simplemente obteniendo las credenciales necesarias, copiandolas al clipboard, y luego borrandolas.',
       features: [
         'Encriptación AES-256 de contraseñas',
         'Comandos CLI intuitivos y rápidos',

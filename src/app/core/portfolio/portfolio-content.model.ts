@@ -131,7 +131,7 @@ export const DEFAULT_PORTFOLIO_CONTENT: PortfolioContent = {
       solution:
         'Desarrollé Perkbox utilizando Go por su velocidad y seguridad inherente. Implementé encriptación AES-256 para almacenar credenciales localmente, con comandos CRUD intuitivos y búsqueda rápida.',
       results:
-        'Herramienta funcional que reduce el tiempo de acceso a contraseñas simplemente obteniendo las credenciales necesarias, copiandolas al clipboard, y luego borrandolas.',
+        'Herramienta funcional que reduce el tiempo de acceso a contraseñas simplemente obteniendo las credenciales necesarias, copiandolas al clipboard, y luego borrandolas. Hoy en dia puede ser instalada descargando el repositorio y compilando el binario, o bajando el paquete "perkbox" desde la AUR (solo para usuarios de Arch Linux).',
       features: [
         'Encriptación AES-256 de contraseñas',
         'Comandos CLI intuitivos y rápidos',
